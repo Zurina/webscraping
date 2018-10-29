@@ -49,9 +49,9 @@ def find_all_links(url, depth):
                 if len(links) != 0 and depth-1 > 0:
                     for link in links_dic.get(url): # runs through the current url's links
                         if not links_dic.get(link): # if the link already is a key in the dictionary
-                            find_all_links(link, depth-1) # if yes, webscrape that shit
+                            find_all_links(link, depth-1) # if no, webscrape that shit
                         else:
-                            print('Link already found!') # if no, continue to next one
+                            print('Link already found!') # if yes, continue to next one
         except:
             print('An error has happened..!')
         
